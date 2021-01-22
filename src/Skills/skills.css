@@ -2,7 +2,7 @@ h1, h3 {
     margin: 0;
 }
 
-.main-container {
+.main-container-skills {
     font-family: 'Comfortaa', cursive;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ h1, h3 {
     height: 100vh;
 }
 
-.text-container {
+.text-container-skills {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -22,43 +22,30 @@ h1, h3 {
     height: 100%;
 }
 
-.text-container h1{
-    font-size: 72px;
+.text-container-skills h1{
+    font-size: 4.7vw;
     margin: 0;
     margin-bottom: 20px;
     font-weight: 200;
 }
 
-.text-container h3{
-    font-size: 33px;
+.text-container-skills h3{
+    font-size: 2.1vw;
     margin: 0;
     margin-top: -10px;
     margin-bottom: 26px;
     font-weight: 200;
     text-align: left;
 }
-.talk-btn {
-    border: solid 1px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 218px;
-    height: 66px;
-    border-radius: 20px;
-    
-}
-.talk-btn h3{
-    margin: 0;
-    font-size: 30px;
-}
-.flex-text {
+
+.flex-text-skills {
     display: flex;
     flex-direction: column;
     
 }
 
-.flex-text .lang {
-    margin-right: 7px;
+.flex-text-skills .lang {
+    margin-right: 1vw;
 }
 ul {
     font-family: 'Comfortaa', cursive;
@@ -71,7 +58,7 @@ ul li {
     position: relative;
     padding: 0 0 0 20px;
     text-align: left;
-    font-size: 33px;
+    font-size: 2.1vw;
     margin-bottom: 32px;
 }
 
