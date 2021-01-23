@@ -1,17 +1,32 @@
 
 import './App.css';
-import NavBar from './navBar';
+import React from 'react';
+import { Component } from 'react';
+import NavBar from './NavBar/navBar';
+import MobNavBar from './NavBar/MobNavBar';
+import SideNav from './NavBar/SideNav';
 import Home from './Home/MainHome';
 import About from './About/AboutMain';
 import Skills from './Skills/MainSkills';
 import Contact from './Contact/MainContact';
 import { BrowserRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actionType from './store/action.js'
 
-function App() {
+
+ class App extends Component {
+   state = {
+    width: window.innerWidth,
+   }
+
+ isMobile = this.state.width <= 768 ? true : false;
+ render () {
+  window.addEventListener('resize', this.handleWindowSizeChange);
   return (
     <BrowserRouter>
         <div className="App">
-      <NavBar />
+          {this.isMobile ? <MobNavBar /> : <NavBar />}
+          {this.isMobile ? <SideNav /> : ""}
       <Home />
       <About />
       <Skills />
@@ -19,8 +34,13 @@ function App() {
     </div>
     </BrowserRouter>
   );
-   
-
+ }
 }
 
-export default App;
+const mapstateToProps = state => {
+  return {
+    menu: state.sideMenu,
+  };
+}
+
+export default connect(mapstateToProps)(App);

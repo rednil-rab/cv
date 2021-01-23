@@ -12,17 +12,17 @@ class About extends Component {
                 <Route exec path="/about" >
                     <div className="main-container-about">
                         <div className="text-container-about">
-                            <h1>Hi, I'm Bar.</h1><br></br>
-                            <h3>For the past 2 year I’m working as a Frontend<br></br>
-                            developer.<br></br>
+                            <h1>Hi, I'm Bar.</h1><br className="deskBr"></br>
+                            <h3>For the past 2 year I’m working <br className="mobBr"></br> as a Frontend <br className="deskBr"></br>
+                            developer.<br className="deskBr"></br><br className="mobBr"></br><br className="mobBr"></br>
 
-                            I’m a hard hard worker, problem solver, motivated,<br></br>
-                            self learner and independent employee.<br></br><br></br>
+                            I’m a hard hard worker, problem <br className="mobBr"></br>solver, motivated,<br className="deskBr"></br>
+                            self learner <br className="mobBr"></br>and independent employee.<br className="deskBr"></br><br className="deskBr"></br>
+                            <br className="mobBr"></br><br className="mobBr"></br><br className="mobBr"></br>
 
+                            A family person, father<br className="mobBr"></br> of amazing little Gaia.<br className="deskBr"></br>
 
-                            A family person, father of amazing little Gaia.<br></br>
-
-                            Fan of movies, comic books and video games.<br></br><br></br>
+                            Fan of movies, comic books and <br className="mobBr"></br>video games.<br className="deskBr"></br><br className="deskBr"></br>
                             </h3>
                             <div className="flex-text-about">
                                 <h3 className="lang">Languages:</h3>

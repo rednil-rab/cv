@@ -66,3 +66,36 @@ h1, h3 {
     text-decoration: none;
     color: inherit;
 }
+
+@media only screen and (max-width: 768px) {
+    .main-container-home {
+        margin: 12vh 0 0;
+        justify-content: flex-start;
+        height: 87vh;
+        overflow: hidden;
+    }
+    .text-container-home {
+        width: 90%;
+        height: 80vh;
+        justify-content: flex-start;
+        margin-top: 10vw;
+        
+    }
+    .text-container-home h1 {
+        font-size: 9.7vw;
+
+    }
+    .text-container-home h3 {
+        font-size: 4.1vw;
+    }
+    .talk-btn-home {
+        width: 135px;
+        height: 37px;
+    }
+    .giant-face {
+        height: 50vh;
+        width: 90vw;
+        top: 25vh;
+        left: 9vw;
+    }
+}

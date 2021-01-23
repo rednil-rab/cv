@@ -2,19 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers  } from 'redux';
 import { Provider} from 'react-redux';
-
-
-// import SearchReducer from './store/reducers/search.js';
-// import LocationReducer from './store/reducers/location.js';
 import reducer from './store/reducers/reducer'
 import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
-// const rootReducer = combineReducers({
-//   srch: SearchReducer,
-//   location: LocationReducer,
-// })
 
 const store = createStore(
   reducer,

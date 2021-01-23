@@ -1,19 +1,18 @@
-// import * as actionTypes from '../action';
+import * as actionTypes from '../action';
 // import axios from 'axios';
 
 const initialState = {
-    city: '',
-    current: null,
-    forecastArray: null,
-    celsius: false,
-    tempFav: null,
-    favorites: (localStorage.getItem('HeroloFavorites') === null) ? [] : JSON.parse(localStorage.getItem('HeroloFavorites'))
+    sideMenu: false,
 
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-
+        case actionTypes.TOGGLE_MENU:
+            return {
+                ...state,
+                sideMenu: state.sideMenu ? false : true
+            }
 
     }
 

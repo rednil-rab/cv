@@ -74,4 +74,46 @@ ul.round li::before {
 	 -moz-border-radius: 50%;
 	 -webkit-border-radius: 50%;
 }
- 
+@media only screen and (max-width: 768px) {
+    .deskBr {
+        display: none;
+    }
+
+    .mobBr {
+        display: unset;
+    }
+    .main-container-skills {
+        margin: 12vh 0 0;
+        justify-content: flex-start;
+        height: 87vh;
+        overflow: hidden;
+    }
+    .text-container-skills {
+        height: 60vh;
+        justify-content: flex-start;
+        margin-top: 5vh;
+    }
+    .text-container-skills h1 {
+        font-size: 9.7vw;
+        text-align: left;
+
+    }
+    .text-container-skills h3 {
+        font-size: 5vw;
+    }
+    .flex-text-skills .lang {
+        margin-right: 3.5vw;
+        font-size: 5vw;
+    }
+    ul {
+        margin: -10px 0 0 5vw;
+    }
+    ul li {
+        font-size: 4.5vw;
+    }
+    ul.round li::before {
+        width: 15px;
+        height: 15px;
+        left: -10px;
+   }
+}

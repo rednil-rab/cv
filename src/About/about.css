@@ -1,7 +1,9 @@
 h1, h3 {
     margin: 0;
 }
-
+.mobBr {
+    display: none;
+}
 .main-container-about {
     font-family: 'Comfortaa', cursive;
     display: flex;
@@ -44,4 +46,35 @@ h1, h3 {
 
 .flex-text-about .lang {
     margin-right: 1vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .deskBr {
+        display: none;
+    }
+
+    .mobBr {
+        display: unset;
+    }
+    .main-container-about {
+        margin: 12vh 0 0;
+        justify-content: flex-start;
+        height: 87vh;
+        overflow: hidden;
+    }
+    .text-container-about {
+        height: 60vh;
+        justify-content: flex-start;
+        margin-top: 10vh;
+    }
+    .text-container-about h1 {
+        font-size: 9.7vw;
+
+    }
+    .text-container-about h3 {
+        font-size: 5vw;
+    }
+    .flex-text-about .lang {
+        margin-right: 3.5vw;
+    }
 }

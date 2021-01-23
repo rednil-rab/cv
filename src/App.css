@@ -91,3 +91,63 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media only screen and (max-width: 768px) {
+  .mob-nav {
+    height: 20vw;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: black;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-nav {
+  top: 19vw;
+  width: 65px;
+  height: 0;
+  transition: all 500ms ease;
+  overflow: hidden;
+  margin-left: 13px;
+  z-index: 1;
+}
+
+.mob-nav > h2 {
+  margin:  0 0 0 5vw ;
+}
+
+.icon-container-mob {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto 2vw;
+  height: 20vw;
+}
+.icon-container-mob .icon {
+  margin: 2vw;
+
+}
+.logo-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15px;
+}
+.logo-div div {
+  transition: all 500ms ease;
+  margin-top: 13px;
+}
+
+
+.logo-div .icon {
+  width: 15px;
+  height: 15px;
+  
+}
+}
