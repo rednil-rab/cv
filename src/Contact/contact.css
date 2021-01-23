@@ -137,6 +137,7 @@ label {
     }
     .input-div {
         height: 15vw;
+        justify-content: flex-end;
     }
     .top-input {
         height: 7.5vw;

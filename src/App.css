@@ -129,6 +129,9 @@
   margin: auto 2vw;
   height: 20vw;
 }
+.icon-container h3{
+font-size: 3vw;
+}
 .icon-container-mob .icon {
   margin: 2vw;
 
