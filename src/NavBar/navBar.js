@@ -34,8 +34,8 @@ export default class NavBar extends Component {
                     {this.state.home ? <a href="/home"><h3 onMouseLeave={() => this.setState({ home: false })}>Home</h3></a> : <Icon.Home onMouseEnter={() => this.setState({ home: true })} className="icon" />}
                     {this.state.about ? <a href="/about"><h3 onMouseLeave={() => this.setState({ about: false })}>About</h3></a> : <Icon.User onMouseEnter={() => this.setState({ about: true })} className="icon" />}
                     {this.state.skills ? <a href="/skills"><h3 onMouseLeave={() => this.setState({ skills: false })}>Skills</h3></a> : <Icon.Settings onMouseEnter={() => this.setState({ skills: true })} className="icon" />}
-                    {this.state.contact ? <a href="/contact"><h3 onMouseLeave={() => this.setState({ contact: false })}>Contact</h3></a> : <Icon.Briefcase onMouseEnter={() => this.setState({ contact: true })} className="icon" />}
-                    {this.state.work ? <h3 onMouseLeave={() => this.setState({ work: false })}>Work</h3> : <Icon.Mail onMouseEnter={() => this.setState({ work: true })} className="icon" />}
+                    {this.state.contact ? <h3 onMouseLeave={() => this.setState({ contact: false })}>Contact</h3>: <Icon.Briefcase onMouseEnter={() => this.setState({ contact: true })} className="icon" />}
+                    {this.state.work ? <a href="/contact"><h3 onMouseLeave={() => this.setState({ work: false })}>Work</h3></a> : <Icon.Mail onMouseEnter={() => this.setState({ work: true })} className="icon" />}
                 </div>
                 <div className="icon-container links">
                     <Icon.GitHub onClick={() => this.openLink('github')} className="icon" />
