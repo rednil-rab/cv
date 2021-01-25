@@ -14,7 +14,7 @@ class Skills extends Component {
                             <h1>Skills & <br className="mobBr"></br>Experience</h1><br className="deskBr mobBr"></br>
                             <h3>Experienced with HTML5, CSS, <br className="mobBr"></br>Javascript, React.js,<br className="deskBr"></br>
 redux,<br className="mobBr"></br> node.js, jQuery, Git, Typescript,<br className="mobBr"></br> SQL, Ajax,<br className="deskBr"></br>
-jira and cross <br className="mobBr"></br>browser compatibility.
+jira.
                             </h3>
                             <h3><u>2019 - present</u></h3>
                             <div className="flex-text-skills">
