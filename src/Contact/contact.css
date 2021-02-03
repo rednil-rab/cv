@@ -90,6 +90,10 @@ label {
     width: 56vw;
     height: 15vw;
     resize: none;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
 }
 
 #submitDiv {
@@ -106,6 +110,7 @@ label {
     height: 3vw;
     width: 10vw;
     font-size: 1.5vw;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px) {

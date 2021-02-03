@@ -3,7 +3,9 @@ import { Component } from 'react';
 import { render } from 'react-dom';
 import * as Icon from 'react-feather';
 import { connect } from 'react-redux';
-import * as utils from '../utils'
+import * as utils from '../utils';
+import { Link } from 'react-router-dom';
+
 class SideNav extends Component {
     state = {
         home: utils.createRegExpTest('/home').test(window.location.href) ? true : false,
@@ -23,19 +25,55 @@ class SideNav extends Component {
             case 'github':
                 window.open('https://github.com/rednil-rab');
                 break;
+            case 'phone':
+                window.open('tel: +972504527530');
+                break;
             default:
                 return;
         }
     }
     render() {
+
+        const resetNavBar = () => {
+            this.setState({
+                home:  false,
+                about:  false,
+                skills:  false,
+                work:  false,
+                contact:  false 
+            })
+        }
+        const handleEnter = (num) => {
+            resetNavBar();
+            switch (num) {
+                case 1:
+                    this.setState({ home: true })
+                break;
+                case 2:
+                    this.setState({ about: true })
+                break;
+                case 3:
+                    this.setState({ skills: true })
+                break;
+                case 4:
+                    this.setState({ work: true })
+                break;
+                case 5:
+                    this.setState({ contact: true })
+                break;
+                default: 
+                return;
+            }
+        }
         return (
             <div className="side-nav" style={{height: this.props.menu ? '300px' : '0'}}>
                 <div className="icon-container">
-                {this.state.home ? <a href="/home"><h3 onMouseLeave={() => this.setState({ home: utils.createRegExpTest('/home').test(window.location.href) ? true : false })}>Home</h3></a> : <Icon.Home onMouseEnter={() => this.setState({ home: true })} className="icon" />}
-                    {this.state.about ? <a href="/about"><h3 onMouseLeave={() => this.setState({ about: utils.createRegExpTest('/about').test(window.location.href) ? true : false })}>About</h3></a> : <Icon.User onMouseEnter={() => this.setState({ about: true })} className="icon" />}
-                    {this.state.skills ? <a href="/skills"><h3 onMouseLeave={() => this.setState({ skills: utils.createRegExpTest('/skills').test(window.location.href) ? true : false })}>Skills</h3></a> : <Icon.Settings onMouseEnter={() => this.setState({ skills: true })} className="icon" />}
-                    {this.state.work ? <h3 onMouseLeave={() => this.setState({ work: utils.createRegExpTest('/work').test(window.location.href) ? true : false })}>Work</h3>: <Icon.Briefcase onMouseEnter={() => this.setState({ work: true })} className="icon" />}
-                    {this.state.contact ? <a href="/contact"><h3 onMouseLeave={() => this.setState({ contact: utils.createRegExpTest('/contact').test(window.location.href) ? true : false })}>Contact</h3></a> : <Icon.Mail onMouseEnter={() => this.setState({ contact: true })} className="icon" />}
+                {this.state.home ? <Link to="/home"><h3 onClick={() => handleEnter(1)}>Home</h3></Link> : <Link to="/home"><Icon.Home onClick={() => handleEnter(1)} className="icon" /></Link>}
+                    {this.state.about ? <Link to="/about"><h3 onClick={() => handleEnter(2)}>About</h3></Link> :<Link to="/about"> <Icon.User onClick={() => handleEnter(2)} className="icon" /></Link>}
+                    {this.state.skills ? <Link to="/skills"><h3 onClick={() => handleEnter(3)}>Skills</h3></Link> : <Link to="/skills"><Icon.Settings onClick={() => handleEnter(3)} className="icon" /></Link>}
+                    {this.state.work ? <Link to="/work"><h3 onClick={() => handleEnter(4)}>Work</h3></Link> : <Link to="/work"><Icon.Briefcase onClick={() => handleEnter(4)} className="icon" /></Link>}
+                    {this.state.contact ? <Link to="/contact"><h3 onClick={() => handleEnter(5)}>Contact</h3></Link > : <Link to="/contact"><Icon.Mail onClick={() => handleEnter(5)} className="icon" /></Link>}
+                    <Icon.Phone onClick={() => this.openLink('phone')} className="icon" />
                 </div>
             </div>
         );

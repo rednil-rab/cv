@@ -13,16 +13,16 @@ class About extends Component {
                     <div className="main-container-about">
                         <div className="text-container-about">
                             <h1>Hi, I'm Bar.</h1><br className="deskBr"></br>
-                            <h3>For the past 2 year I’m working <br className="mobBr"></br> as a Frontend <br className="deskBr"></br>
-                            developer.<br className="deskBr"></br><br className="mobBr"></br><br className="mobBr"></br>
+                            <h3>And for the past 2 years i've been working <br className="mobBr"></br> as a <br className="deskBr"></br>Frontend 
+                            developer.<br className="deskBr"></br><br className="deskBr"></br><br className="mobBr"></br><br className="mobBr"></br>
 
-                            I’m a hard hard worker, problem <br className="mobBr"></br>solver, motivated,<br className="deskBr"></br>
-                            self learner <br className="mobBr"></br>and independent employee.<br className="deskBr"></br><br className="deskBr"></br>
+                            I’m a hard working, problem <br className="mobBr"></br>solving, motivated,<br className="deskBr"></br>
+                            self learning, <br className="mobBr"></br> independent employee.<br className="deskBr"></br><br className="deskBr"></br>
                             <br className="mobBr"></br><br className="mobBr"></br><br className="mobBr"></br>
 
-                            A family person, father<br className="mobBr"></br> of amazing little Gaia.<br className="deskBr"></br>
+                            A family man, father<br className="mobBr"></br> of amazing little Gaia.<br className="deskBr"></br>
 
-                            Fan of movies, comic books and <br className="mobBr"></br>video games.<br className="deskBr"></br><br className="deskBr"></br>
+                            Fan of cinema, comic books and <br className="mobBr"></br>video games.<br className="deskBr"></br><br className="deskBr"></br>
                             </h3>
                             <div className="flex-text-about">
                                 <h3 className="lang">Languages:</h3>

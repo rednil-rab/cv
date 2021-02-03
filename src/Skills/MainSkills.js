@@ -20,9 +20,11 @@ jira.
                             <div className="flex-text-skills">
                                 <h3><strong>Dolphin Soft,</strong> Netanya</h3>
                                 <ul className="round">
-                                    <li>Building one-page interactive ads.</li>
-                                    <li>Developing several systems with<br className="mobBr"></br> unique functionalities.</li>
-                                    <li>Building landing pages for <br className="mobBr"></br>corporations</li>
+                                    <li>Building one-page interactive rich media ads.</li>
+                                    <li>Development and maintenance of several systems<br className="mobBr"></br> with unique functionalities. for various small buisnesses</li>
+                                    <li>Constructing and maintaining landing pages for <br className="mobBr"></br>a major corporation</li>
+                                    <li>Writing and executing SQL queries</li>
+                                    <li>Analyzing google analytics data</li>
                                 </ul>
                             </div>
 

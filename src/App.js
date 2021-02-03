@@ -9,6 +9,8 @@ import Home from './Home/MainHome';
 import About from './About/AboutMain';
 import Skills from './Skills/MainSkills';
 import Contact from './Contact/MainContact';
+import Work from './Work/MainWork';
+import SubWork from './Work/SubWork';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actionType from './store/action.js'
@@ -29,6 +31,8 @@ import * as actionType from './store/action.js'
           {this.isMobile ? <SideNav /> : ""}
       <Home />
       <About />
+      <Work />
+      <SubWork />
       <Skills />
       <Contact />
     </div>

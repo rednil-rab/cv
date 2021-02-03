@@ -3,7 +3,13 @@ import * as actionTypes from '../action';
 
 const initialState = {
     sideMenu: false,
-
+    portfolioObj: {
+        name: null,
+        campaign: null,
+        image: null,
+        image2: null,
+        link: null
+    }
 }
 
 const reducer = (state = initialState, action) => {
@@ -13,7 +19,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 sideMenu: state.sideMenu ? false : true
             }
-
+        case actionTypes.SET_PORTFOLIO_OBJECT:
+            return {
+                ...state,
+                portfolioObj: action.value
+            }
     }
 
     return state;
