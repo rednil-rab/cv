@@ -10,35 +10,44 @@ import About from './About/AboutMain';
 import Skills from './Skills/MainSkills';
 import Contact from './Contact/MainContact';
 import Work from './Work/MainWork';
-import SubWork from './Work/SubWork';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actionType from './store/action.js'
 
 
  class App extends Component {
-   state = {
-    width: window.innerWidth,
-   }
-
- isMobile = this.state.width <= 768 ? true : false;
+  state = { width: window.innerWidth, height: window.innerHeight };
  render () {
-  window.addEventListener('resize', this.handleWindowSizeChange);
+   const handleClick = (e) => {
+     if (this.props.menu && e.target.id !='navBtn') {
+      this.props.toggleMenu()
+     } else {
+       return;
+     }
+   }
   return (
     <BrowserRouter>
-        <div className="App">
-          {this.isMobile ? <MobNavBar /> : <NavBar />}
-          {this.isMobile ? <SideNav /> : ""}
+        <div className="App" onClick={(event) => handleClick(event)}>
+          {this.state.width <= 768 ? <MobNavBar /> : <NavBar />}
+          {this.state.width <= 768 ? <SideNav /> : ""}
       <Home />
       <About />
       <Work />
-      <SubWork />
       <Skills />
       <Contact />
     </div>
     </BrowserRouter>
   );
  }
+ updateDimensions = () => {
+  this.setState({ width: window.innerWidth, height: window.innerHeight });
+};
+componentDidMount() {
+  window.addEventListener('resize', this.updateDimensions);
+}
+componentWillUnmount() {
+  window.removeEventListener('resize', this.updateDimensions);
+}
 }
 
 const mapstateToProps = state => {
@@ -46,5 +55,9 @@ const mapstateToProps = state => {
     menu: state.sideMenu,
   };
 }
-
-export default connect(mapstateToProps)(App);
+const mapDispatchToProps = dispatch => {
+  return {
+      toggleMenu: () => dispatch({ type: actionType.TOGGLE_MENU }),
+  }
+}
+export default connect(mapstateToProps,mapDispatchToProps)(App);

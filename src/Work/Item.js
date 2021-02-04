@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
-import { Component } from 'react';
-import { Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import * as actionType from '../store/action.js';
-import { Link } from 'react-router-dom'
+import * as utils from '../utils'
 
 export default function Item(props) {
-    const dispatch = useDispatch();
-    const [display, setDisplay] = useState(false);
-    const id = `circle_${props.id}`;
     const textId = `text_${props.id}`;
-    const circle = <Link onClick={() => handleClick()}><div id={id} className="work-circle">
-        more info
-</div></Link>
     const handleMOuseOver = () => {
         if (document.getElementById(textId) == null) {
             return;
@@ -27,7 +17,15 @@ export default function Item(props) {
 
     }
     const handleClick = () => {
-        window.open(props.link);
+        if (utils.isMobile) {
+            handleMOuseOver();
+            setTimeout(()=>{
+                window.open(props.link);
+            }, 1500)
+        } else {
+            window.open(props.link);
+        }
+        
     }
     const handleMOuseEnter = () => {
         
@@ -37,11 +35,9 @@ export default function Item(props) {
             className="single-item">
                 <h2 id={textId} onMouseover={() => handleMOuseEnter()}>{props.name}</h2>
             <img
-
+                onClick={() => handleClick()}
                 onMouseOver={() => handleMOuseOver()}
                 src={props.image}></img>
-            
-            {/* {display ? circle : ''} */}
 
         </div>
     )

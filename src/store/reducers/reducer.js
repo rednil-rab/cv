@@ -3,13 +3,7 @@ import * as actionTypes from '../action';
 
 const initialState = {
     sideMenu: false,
-    portfolioObj: {
-        name: null,
-        campaign: null,
-        image: null,
-        image2: null,
-        link: null
-    }
+    loading: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -19,10 +13,10 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 sideMenu: state.sideMenu ? false : true
             }
-        case actionTypes.SET_PORTFOLIO_OBJECT:
+        case actionTypes.TOGGLE_LOADING:
             return {
                 ...state,
-                portfolioObj: action.value
+                loading: state.loading ? false : true
             }
     }
 

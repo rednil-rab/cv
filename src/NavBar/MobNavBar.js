@@ -32,7 +32,7 @@ class MobNavBar extends Component {
             <div className="mob-nav">
                 <div className="logo-div">
 
-                    <h2 onClick={() => this.props.toggleMenu()}>Bar</h2>
+                    <h2 id="navBtn" onClick={() => this.props.toggleMenu()}>Bar</h2>
                     <div style={{ transform: this.props.menu ? 'rotate(-90deg)' : 'rotate(90deg)' }}>
                         <Icon.Play className="icon" />
                     </div>

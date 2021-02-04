@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import './home.css'
 import image from './giantface.jpg'
 import {Animated} from "react-animated-css";
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
     state = {
@@ -37,13 +38,15 @@ class Home extends Component {
                             <Animated animationInDelay="1000" animationIn="fadeIn">
                             <h3>Frontend developer / Fullstack developer.</h3>
                             </Animated>
-                            
-                            <a href="/contact"><div className="talk-btn-home">
+                            <Link to='/contact'>
+                            <div className="talk-btn-home">
                                     <div className={`animated ${this.state.rubber}`} onMouseOver={()=>handleMOuseOver()}>
                                         <h3>Let's talk</h3>
                                     </div>
                                 
-                            </div></a>
+                            </div>
+                            </Link>
+
                         </div>
 
                     </div>

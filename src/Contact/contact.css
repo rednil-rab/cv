@@ -20,7 +20,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:center;
+    justify-content:start;
     height: 100%;
 }
 
@@ -171,3 +171,30 @@ label {
         font-size: 3.5vw;
     }
 }
+
+.lds-dual-ring {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    margin: 8px;
+    border-radius: 50%;
+    border: 3vw solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.9s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

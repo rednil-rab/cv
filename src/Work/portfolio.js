@@ -20,13 +20,13 @@ import market from './images/market.png'
         name: "Susu & Sons",
         campaign: "tiktak",
         image: susu,
-        link: 'https://adsil1.com/isracard/1120/tiktak/float/'
+        link: 'http://adsil1.com/susu/live/'
     },
     {
         name: "City Market",
         campaign: "tiktak",
         image: market,
-        link: 'https://adsil1.com/isracard/1120/tiktak/float/'
+        link: 'http://adsil1.com/market/live/'
     },
 ]
 
