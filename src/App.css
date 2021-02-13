@@ -115,7 +115,6 @@
   position: fixed;
   top: 90%;
   width: 100vw;
-  transition: all 500ms ease;
   overflow: hidden;
   z-index: 1;
 }
