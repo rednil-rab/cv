@@ -43,7 +43,7 @@ export default function Form() {
                         <textarea name="message" className="content-input top-input"></textarea>
                     </div>
                     <div id="submitDiv" className="input-div">
-                        <input type="submit" className="bl-send-btn" value="Submit"></input>
+                        <input type="submit" className="bl-send-btn" value="SUBMIT"></input>
                         
                     </div>
                 </div>

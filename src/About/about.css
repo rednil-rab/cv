@@ -73,7 +73,7 @@ h1, h3 {
         display: unset;
     }
     .main-container-about {
-        margin: 12vh 0 0;
+        margin: 0 0 0;
         justify-content: flex-start;
         height: 87vh;
         overflow: auto;

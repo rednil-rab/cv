@@ -153,11 +153,12 @@
     .portfolio-div {
         margin-top: 5vh;
         grid-template-columns: 1fr;
+        margin-bottom: 24%;
     }
     .text-container-work h1 {
         font-size: 9.7vw;
         align-self: flex-start;
-        margin: 30vw 0 0;
+        margin: 5vw 0 0;
     }
     .single-item {
         width: 80vw;

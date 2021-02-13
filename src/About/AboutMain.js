@@ -27,7 +27,7 @@ class About extends Component {
                             <div className="flex-container-about">
                                 <div className="flex-text-about">
                                     <h3 className="lang"><u>Languages</u></h3>
-                                    <h3>                             Hebrew - native<br className="deskBr mobBr"></br>
+                                    <h3>                             Hebrew - native <br></br>
                                         English - native level</h3>
                                 </div>
                                 <div className="flex-text-about">

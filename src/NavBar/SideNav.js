@@ -66,8 +66,8 @@ class SideNav extends Component {
             }
         }
         return (
-            <div className="side-nav" style={{height: this.props.menu ? '300px' : '0'}}>
-                <div className="icon-container">
+            <div className="side-nav">
+                <div className="icon-container-mob">
                 {this.state.home ? <Link to="/home"><h3 onClick={() => handleEnter(1)}>Home</h3></Link> : <Link to="/home"><Icon.Home onClick={() => handleEnter(1)} className="icon" /></Link>}
                     {this.state.about ? <Link to="/about"><h3 onClick={() => handleEnter(2)}>About</h3></Link> :<Link to="/about"> <Icon.User onClick={() => handleEnter(2)} className="icon" /></Link>}
                     {this.state.skills ? <Link to="/skills"><h3 onClick={() => handleEnter(3)}>Skills</h3></Link> : <Link to="/skills"><Icon.Settings onClick={() => handleEnter(3)} className="icon" /></Link>}

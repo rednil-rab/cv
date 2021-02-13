@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import { Component } from 'react';
 import NavBar from './NavBar/navBar';
-import MobNavBar from './NavBar/MobNavBar';
+
 import SideNav from './NavBar/SideNav';
 import Home from './Home/MainHome';
 import About from './About/AboutMain';
@@ -18,19 +18,14 @@ import * as actionType from './store/action.js'
  class App extends Component {
   state = { width: window.innerWidth, height: window.innerHeight };
  render () {
-   const handleClick = (e) => {
-     if (this.props.menu && e.target.id !='navBtn') {
-      this.props.toggleMenu()
-     } else {
-       return;
-     }
-   }
   return (
     <BrowserRouter>
-        <div className="App" onClick={(event) => handleClick(event)}>
-          {this.state.width <= 768 ? <MobNavBar /> : <NavBar />}
+        <div className="App">
+          {this.state.width <= 768 ? '' : <NavBar />}
           {this.state.width <= 768 ? <SideNav /> : ""}
-      <Home />
+      <Home
+      width={this.state.width}
+       />
       <About />
       <Work />
       <Skills />

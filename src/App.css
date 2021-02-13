@@ -111,9 +111,10 @@
 }
 
 .side-nav {
-  top: 19vw;
-  width: 80px;
-  height: 0;
+  height: 10%;
+  position: fixed;
+  top: 90%;
+  width: 100vw;
   transition: all 500ms ease;
   overflow: hidden;
   z-index: 1;
@@ -130,6 +131,13 @@
   justify-content: space-evenly;
   margin: auto 2vw;
   height: 20vw;
+}
+.links {
+  width: 35vw;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin: unset;
 }
 .icon-container h3{
 font-size: 3vw;

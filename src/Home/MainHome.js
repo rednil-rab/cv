@@ -6,12 +6,14 @@ import './home.css'
 import image from './giantface.jpg'
 import {Animated} from "react-animated-css";
 import { Link } from 'react-router-dom'
+import MobNavBar from '../NavBar/MobNavBar';
 
 class Home extends Component {
     state = {
         rubber: 'none',
     }
     render() {
+        const {width} = this.props;
         const handleMOuseOver = () => {
             if (this.state.rubber == 'rubberBand') {
                 return;
@@ -43,24 +45,16 @@ class Home extends Component {
                                     <div className={`animated ${this.state.rubber}`} onMouseOver={()=>handleMOuseOver()}>
                                         <h3>Let's talk</h3>
                                     </div>
-                                
+                                    
                             </div>
                             </Link>
-
+                            {width <= 768 ? <MobNavBar /> : ''}
                         </div>
 
                     </div>
 
                 <img className="giant-face" src={image}></img>
-                {/* <div class="ag-format-container">
-    <ul  class="ag-glitch_list">
-      <li style={{backgroundImage: image}} class="ag-glitch_item"><img className="giant-face" src={image}></img></li>
-      <li style={{background: image}} class="ag-glitch_item"><img className="giant-face" src={image}></img></li>
-      <li style={{background: image}} class="ag-glitch_item"><img className="giant-face" src={image}></img></li>
-      <li style={{background: image}} class="ag-glitch_item"><img className="giant-face" src={image}></img></li>
-      <li style={{background: image}} class="ag-glitch_item"><img className="giant-face" src={image}></img></li>
-    </ul>
-  </div> */}
+
                 </Route>
             </div>
         )
