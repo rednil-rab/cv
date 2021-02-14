@@ -18,9 +18,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 loading: state.loading ? false : true
             }
+        default:
+            return state;
     }
-
-    return state;
 }
 
 export default reducer

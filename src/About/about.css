@@ -16,7 +16,6 @@ h1, h3 {
     margin-bottom: 20px;
     font-weight: 200;
 }
-
 .text-container-about h3{
     font-size: 2.1vw;
     margin: 0;
@@ -32,7 +31,7 @@ h1, h3 {
     display: flex;
     flex-direction: column;
     background-color: rgb(229 229 229);
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 31px;
     width: 21vw;
@@ -40,7 +39,6 @@ h1, h3 {
     text-align: center;
     margin-right: 2vw;
 }
-
 .flex-text-about .lang {
     margin: 3vw auto 1vw auto;
     text-align: center;
@@ -58,12 +56,7 @@ h1, h3 {
     .mobBr {
         display: unset;
     }
-    .main-container-about {
-        margin: 0 0 0;
-        justify-content: flex-start;
-        height: 87vh;
-        overflow: auto;
-    }
+
     .text-container-about {
         height: 60vh;
         justify-content: flex-start;

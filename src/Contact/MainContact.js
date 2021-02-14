@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import './contact.css'
 import { connect } from 'react-redux';
 import Form from './Form'
-import * as actionType from '../store/action.js';
+
 class Contact extends Component {
 
     render() {

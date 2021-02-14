@@ -15,7 +15,7 @@ class Home extends Component {
     render() {
         const {width} = this.props;
         const handleMOuseOver = () => {
-            if (this.state.rubber == 'rubberBand') {
+            if (this.state.rubber === 'rubberBand') {
                 return;
             }
             this.setState({rubber: 'rubberBand'})
@@ -53,7 +53,7 @@ class Home extends Component {
 
                     </div>
 
-                <img className="giant-face" src={image}></img>
+                <img className="giant-face" alt="bar's giant face" src={image}></img>
 
                 </Route>
         )

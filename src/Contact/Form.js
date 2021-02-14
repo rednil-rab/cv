@@ -1,7 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { useDispatch } from 'react-redux';
-import {useState} from 'react';
 import * as actionType from '../store/action.js';
 
 export default function Form() {

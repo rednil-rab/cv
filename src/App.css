@@ -126,7 +126,7 @@
   margin: 0 0 0;
   justify-content: flex-start;
   height: 87vh;
-  overflow: hidden;
+  overflow: auto;
 }
   .mob-nav {
     height: 20vw;

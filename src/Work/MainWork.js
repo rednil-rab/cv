@@ -8,18 +8,18 @@ import './work.css';
 import * as utils from '../utils';
 
 
-
 class Work extends Component {
 
     render() {
-        const content = portfolio.map((item) =>
+        const content = portfolio.map((item, index) =>
             <Item
+                key={utils.ID()}
                 image={item.image}
                 image2={item.image2}
                 name={item.name}
                 campaign={item.campaign}
                 link={item.link}
-                id={utils.ID()}
+                id={index}
             />
         )
         return (
