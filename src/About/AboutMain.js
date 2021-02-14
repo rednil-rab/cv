@@ -8,10 +8,10 @@ class About extends Component {
 
     render() {
         return (
-            <div>
+
                 <Route exec path="/about" >
-                    <div className="main-container-about">
-                        <div className="text-container-about">
+                    <div className="main-container">
+                        <div className="text-container-about text-container">
                             <h1>Hi, I'm Bar.</h1><br className="deskBr"></br>
                             <h3>And for the past 2 years i've been working  as a <br className="deskBr"></br>Frontend
                             developer.<br className="deskBr"></br><br className="deskBr"></br><br className="mobBr"></br><br className="mobBr"></br>
@@ -48,7 +48,6 @@ class About extends Component {
 
 
                 </Route>
-            </div>
         )
     }
 }

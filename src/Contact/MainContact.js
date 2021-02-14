@@ -9,10 +9,10 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="main-home">
+
                 <Route exec path="/contact" >
-                    <div className="main-container-contact">
-                        <div className="text-container-contact">
+                    <div className="main-container">
+                        <div className="text-container-contact text-container">
                             <h1>Let’s talk</h1>
                             <h3>I always love to hear about new opportunities.</h3>
                             {this.props.loading ? <div className="lds-dual-ring"></div> : <Form />}
@@ -22,7 +22,6 @@ class Contact extends Component {
 
                     </div>
                 </Route>
-            </div>
         )
     }
 }

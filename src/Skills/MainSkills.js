@@ -7,13 +7,10 @@ class Skills extends Component {
 
     render() {
         return (
-            <div>
-                <Route exec path="/skills" >
-                    <div className="main-container-skills">
-                        <div>
 
-                        </div>
-                        <div className="text-container-skills">
+                <Route exec path="/skills" >
+                    <div className="main-container">
+                        <div className="text-container-skills text-container">
                             <h1>Skills & <br className="mobBr"></br>Experience</h1><br className="deskBr mobBr"></br>
                             <h3>Experienced with HTML5, CSS, <br className="mobBr"></br>Javascript, React.js,<br className="deskBr"></br>
 redux,<br className="mobBr"></br> node.js, jQuery, Git, Typescript,<br className="mobBr"></br> SQL, Ajax, <br className="deskBr"></br>Bootstrap
@@ -47,7 +44,6 @@ and jira.
 
 
                 </Route>
-            </div>
         )
     }
 }

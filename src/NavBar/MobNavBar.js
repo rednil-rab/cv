@@ -33,7 +33,7 @@ class MobNavBar extends Component {
                     <Icon.GitHub onClick={() => this.openLink('github')} className="icon" />
                     <Icon.Linkedin onClick={() => this.openLink('linkedin')} className="icon" />
                     <Icon.Facebook onClick={() => this.openLink('facebook')} className="icon" />
-                    
+                    <Icon.Phone onClick={() => this.openLink('phone')} className="icon" />
                 </div>
         );
     }

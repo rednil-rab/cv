@@ -24,20 +24,20 @@ class Home extends Component {
             }, 1000)
         }
         return (
-            <div className="main-home">
+
                 <Route exec path="/home" >
-                    <div className="main-container-home">
-                        <div className="text-container-home">
+                    <div className="main-container">
+                        <div className="text-container-home text-container">
                             <Animated animationIn="bounceInLeft">
                                 <h1 >Hi,</h1>
                             </Animated>
-                            <Animated animationInDelay="250" ani animationIn="bounceInLeft">
+                            <Animated animationInDelay={250} ani animationIn="bounceInLeft">
                             <h1>I'm Bar,</h1>
                             </Animated>
-                            <Animated animationInDelay="500" animationIn="bounceInLeft">
+                            <Animated animationInDelay={500} animationIn="bounceInLeft">
                             <h1>A Web developer.</h1>
                             </Animated>
-                            <Animated animationInDelay="1000" animationIn="fadeIn">
+                            <Animated animationInDelay={1000} animationIn="fadeIn">
                             <h3>Frontend developer / Fullstack developer.</h3>
                             </Animated>
                             <Link to='/contact'>
@@ -56,7 +56,6 @@ class Home extends Component {
                 <img className="giant-face" src={image}></img>
 
                 </Route>
-            </div>
         )
     }
 }

@@ -73,7 +73,7 @@ class SideNav extends Component {
                     {this.state.skills ? <Link to="/skills"><h3 onClick={() => handleEnter(3)}>Skills</h3></Link> : <Link to="/skills"><Icon.Settings onClick={() => handleEnter(3)} className="icon" /></Link>}
                     {this.state.work ? <Link to="/work"><h3 onClick={() => handleEnter(4)}>Work</h3></Link> : <Link to="/work"><Icon.Briefcase onClick={() => handleEnter(4)} className="icon" /></Link>}
                     {this.state.contact ? <Link to="/contact"><h3 onClick={() => handleEnter(5)}>Contact</h3></Link > : <Link to="/contact"><Icon.Mail onClick={() => handleEnter(5)} className="icon" /></Link>}
-                    <Icon.Phone onClick={() => this.openLink('phone')} className="icon" />
+                    
                     
                 </div>
             </div>

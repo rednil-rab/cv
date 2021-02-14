@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import * as utils from '../utils'
 
 export default function Item(props) {
-    const textId = `text_${props.id}`;
     const handleMOuseOver = () => {
-        if (document.getElementById(textId) == null) {
+        if (document.getElementById(props.id) == null) {
             return;
         }
-        document.getElementById(textId).style.animation = 'text-shadow 1.5s ease-in-out 1';
+        document.getElementById(props.id).style.animation = 'text-shadow 1.5s ease-in-out 1';
         setTimeout(()=>{
-            if (document.getElementById(textId) == null) {
+            if (document.getElementById(props.id) == null) {
                 return;
             }
-            document.getElementById(textId).style.animation = ''
+            document.getElementById(props.id).style.animation = ''
         },1500)
 
     }
@@ -33,7 +32,7 @@ export default function Item(props) {
     return (
         <div
             className="single-item">
-                <h2 id={textId} onMouseover={() => handleMOuseEnter()}>{props.name}</h2>
+                <h2 id={props.id} onMouseOver={() => handleMOuseEnter()}>{props.name}</h2>
             <img
                 onClick={() => handleClick()}
                 onMouseOver={() => handleMOuseOver()}
