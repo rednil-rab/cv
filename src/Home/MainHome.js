@@ -25,7 +25,7 @@ class Home extends Component {
         }
         return (
 
-                <Route exec path="/home" >
+                <Route exec path="/" >
                     <div className="main-container">
                         <div className="text-container-home text-container">
                             <Animated animationIn="bounceInLeft">
