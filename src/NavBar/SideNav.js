@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 class SideNav extends Component {
     state = {
-        home: utils.createRegExpTest('/home').test(window.location.href) ? true : false,
+        home: utils.createRegExpTest('/cv').test(window.location.href) ? true : false,
         about: utils.createRegExpTest('/about').test(window.location.href) ? true : false,
         skills: utils.createRegExpTest('/skills').test(window.location.href) ? true : false,
         contact: utils.createRegExpTest('/contact').test(window.location.href) ? true : false,
@@ -67,7 +67,7 @@ class SideNav extends Component {
         return (
             <div className="side-nav">
                 <div className="icon-container-mob">
-                {this.state.home ? <Link to="/home"><h3 onClick={() => handleEnter(1)}>Home</h3></Link> : <Link to="/home"><Icon.Home onClick={() => handleEnter(1)} className="icon" /></Link>}
+                {this.state.home ? <Link to="/cv"><h3 onClick={() => handleEnter(1)}>Home</h3></Link> : <Link to="/cv"><Icon.Home onClick={() => handleEnter(1)} className="icon" /></Link>}
                     {this.state.about ? <Link to="/about"><h3 onClick={() => handleEnter(2)}>About</h3></Link> :<Link to="/about"> <Icon.User onClick={() => handleEnter(2)} className="icon" /></Link>}
                     {this.state.skills ? <Link to="/skills"><h3 onClick={() => handleEnter(3)}>Skills</h3></Link> : <Link to="/skills"><Icon.Settings onClick={() => handleEnter(3)} className="icon" /></Link>}
                     {this.state.work ? <Link to="/work"><h3 onClick={() => handleEnter(4)}>Work</h3></Link> : <Link to="/work"><Icon.Briefcase onClick={() => handleEnter(4)} className="icon" /></Link>}

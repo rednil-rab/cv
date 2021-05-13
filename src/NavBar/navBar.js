@@ -29,7 +29,7 @@ export default class NavBar extends Component {
     }
 
     url = {
-        home: '/home',
+        home: '/cv',
         about: '/about',
         skills: '/contact',
         work: '/work'
@@ -41,7 +41,7 @@ export default class NavBar extends Component {
 
         const resetNavBar = () => {
             this.setState({
-                home: utils.createRegExpTest('/home').test(window.location.href) ? true : false,
+                home: utils.createRegExpTest('/cv').test(window.location.href) ? true : false,
                 about: utils.createRegExpTest('/about').test(window.location.href) ? true : false,
                 skills: utils.createRegExpTest('/skills').test(window.location.href) ? true : false,
                 work: utils.createRegExpTest('/work').test(window.location.href) ? true : false,
@@ -74,7 +74,7 @@ export default class NavBar extends Component {
             <div className="side-nav">
                 <h2>Bar</h2>
                 <div className="icon-container">
-                    {this.state.home ? <Link to="/home"><h3 onMouseLeave={() => resetNavBar()}>Home</h3></Link> : <Icon.Home onMouseEnter={() => handleEnter(1)} className="icon" />}
+                    {this.state.home ? <Link to="/cv"><h3 onMouseLeave={() => resetNavBar()}>Home</h3></Link> : <Icon.Home onMouseEnter={() => handleEnter(1)} className="icon" />}
                     {this.state.about ? <Link to="/about"><h3 onMouseLeave={() => resetNavBar()}>About</h3></Link> : <Icon.User onMouseEnter={() => handleEnter(2)} className="icon" />}
                     {this.state.skills ? <Link to="/skills"><h3 onMouseLeave={() => resetNavBar()}>Skills</h3></Link> : <Icon.Settings onMouseEnter={() => handleEnter(3)} className="icon" />}
                     {this.state.work ? <Link to="/work"><h3 onMouseLeave={() => resetNavBar()}>Work</h3></Link> : <Icon.Briefcase onMouseEnter={() => handleEnter(4)} className="icon" />}
